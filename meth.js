@@ -28,8 +28,8 @@ async function loadBurns() {
 function truncateGwei(wei) {
     fmt = {
         prefix: '=> ',
-        decimalSeparator: ',',
-        groupSeparator: '.',
+        decimalSeparator: '.',
+        groupSeparator: ',',
         groupSize: 3
     }
     return new BigNumber(web3.utils.fromWei(wei, 'ether')).decimalPlaces(0).toFormat(fmt);
