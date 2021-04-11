@@ -22,7 +22,7 @@ async function loadBurns() {
         totalBurned += block['amount']
     }
 }
-
+//
 function truncateGwei(wei) {
     fmt = {
         prefix: '=> ',
