@@ -66,13 +66,13 @@ async function printSupply() {
         await window.contract.methods.MAX_SUPPLY().call());
 
     var toMine = maxSupply.sub(totalSupply).sub(burned);
-    methPerDay = new web3.utils.BN(burned.div(days_passed())).mul(new web3.utils.BN(7))
+    methPerWeek = new web3.utils.BN(burned.div(days_passed())).mul(new web3.utils.BN(7))
     
     updateStatus(`<br>max ${truncateGwei(maxSupply)}
     <br>burned ${truncateGwei(burned)}
     <br>unfarmed ${truncateGwei(toMine)}
     <br>total ${truncateGwei(totalSupply)}
-    <br>burning average of ${truncateGwei(methPerDay)} per week since first burn <br>https://etherscan.io/tx/0x250acfe3eb8a31b019961f3bc7b73c2e23f02004611a38568d14a55f0a48c7c1`);
+    <br>burning average of ${truncateGwei(methPerWeek)} per week since first burn ${days_passed()} days ago<br>https://etherscan.io/tx/0x250acfe3eb8a31b019961f3bc7b73c2e23f02004611a38568d14a55f0a48c7c1`);
 }
 
 async function load() {
