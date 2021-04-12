@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: farmingbad.github.io
+Token: 1e24c7ddf81d412c9a27e12b788d06b4f0fe0bb5792f888e4dbf00874dc5ce28
